@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+// Variables
+
+$primaryColor: #b3eaff;
+$textColor: #4a5d8b;
+
+// mixin
+@mixin tombol {
+  display: inline-block;
+  color: $textColor;
+  background-color: $primaryColor;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-image: url(../img/bg_1.png), url(../img/bg_2.png);
+  background-position: top left, right bottom;
+  background-repeat: no-repeat;
+  background-size: 40vmax, 50vmax;
+  background-attachment: fixed;
+
+  @media screen and (max-width: 992px) {
+  }
+}
+
+// navbar
+.custom-nav {
+  .navbar-brand {
+    margin-left: -7em;
+    img {
+      width: 45px;
+      height: 45px;
+      margin-top: -7px;
+    }
+    span {
+      color: $textColor;
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-left: 0.4em;
+      &:hover {
+        color: lighten($textColor, 10%);
+      }
+    }
+  }
+}
+
+#navbarNav {
+  .navbar-nav {
+    margin-right: -10em;
+    .nav-link {
+      color: $textColor;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-left: 4em;
+
+      &:hover {
+        transition: 0.5s ease;
+        color: lighten($textColor, 15%);
+      }
+    }
+  }
+}
+
+.custom-section {
+  margin-top: 17em;
+  margin-left: -10em;
+  color: $textColor;
+  h1 {
+    font-weight: 700;
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  img {
+    margin-top: -5em;
+    margin-left: 29em;
+  }
+
+  .custom-btn {
+    @include tombol();
+    transition: 0.5s ease;
+    &:hover {
+      color: $textColor;
+      border: 1px solid $primaryColor;
+      background-color: lighten($primaryColor, 10%);
+      text-decoration: none;
+    }
+  }
+}
+
+.section-socmed {
+  margin-left: -10em;
+  margin-top: 2.5em;
+  a {
+    text-decoration: none;
+    img {
+      margin-left: 1px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
