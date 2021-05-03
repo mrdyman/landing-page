@@ -25,6 +25,11 @@ body {
   background-attachment: fixed;
 
   @media screen and (max-width: 992px) {
+    background-image: url(../img/bg_1.png), url(../img/bg_2.png);
+    background-position: top left, right bottom;
+    background-repeat: no-repeat;
+    background-size: 40vmax, 0vmax;
+    background-attachment: fixed;
   }
 }
 
@@ -46,23 +51,32 @@ body {
         color: lighten($textColor, 10%);
       }
     }
-  }
-}
-
-#navbarNav {
-  .navbar-nav {
-    margin-right: -10em;
-    .nav-link {
-      color: $textColor;
-      font-weight: 700;
-      font-size: 1.2rem;
-      margin-left: 4em;
-
-      &:hover {
-        transition: 0.5s ease;
-        color: lighten($textColor, 15%);
+    @media screen and (max-width: 992px) {
+      .home-span {
+        display: block;
       }
     }
+  }
+
+  #navbarNav {
+    .navbar-nav {
+      margin-right: -10em;
+      .nav-link {
+        color: $textColor;
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-left: 4em;
+
+        &:hover {
+          transition: 0.5s ease;
+          color: lighten($textColor, 15%);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    margin-top: -2em;
+    margin-left: -5em;
   }
 }
 
@@ -92,6 +106,20 @@ body {
       text-decoration: none;
     }
   }
+
+  @media screen and (max-width: 992px) {
+    margin: auto;
+    text-align: center;
+    margin-top: 5em;
+    img {
+      display: none;
+    }
+    .custom-btn {
+      padding: 0.5em 0.6em;
+      margin: 0.3em auto;
+      text-align: center;
+    }
+  }
 }
 
 .section-socmed {
@@ -104,5 +132,10 @@ body {
       width: 35px;
       height: 35px;
     }
+  }
+  @media screen and (max-width: 992px) {
+    margin: auto;
+    text-align: center;
+    margin: 1.5em 0em;
   }
 }

@@ -8,6 +8,16 @@ body {
   background-attachment: fixed;
 }
 
+@media screen and (max-width: 992px) {
+  body {
+    background-image: url(../img/bg_1.png), url(../img/bg_2.png);
+    background-position: top left, right bottom;
+    background-repeat: no-repeat;
+    background-size: 40vmax, 0vmax;
+    background-attachment: fixed;
+  }
+}
+
 .custom-nav .navbar-brand {
   margin-left: -7em;
 }
@@ -29,21 +39,34 @@ body {
   color: #5e74aa;
 }
 
-#navbarNav .navbar-nav {
+@media screen and (max-width: 992px) {
+  .custom-nav .navbar-brand .home-span {
+    display: block;
+  }
+}
+
+.custom-nav #navbarNav .navbar-nav {
   margin-right: -10em;
 }
 
-#navbarNav .navbar-nav .nav-link {
+.custom-nav #navbarNav .navbar-nav .nav-link {
   color: #4a5d8b;
   font-weight: 700;
   font-size: 1.2rem;
   margin-left: 4em;
 }
 
-#navbarNav .navbar-nav .nav-link:hover {
+.custom-nav #navbarNav .navbar-nav .nav-link:hover {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   color: #6f83b2;
+}
+
+@media screen and (max-width: 992px) {
+  .custom-nav {
+    margin-top: -2em;
+    margin-left: -5em;
+  }
 }
 
 .custom-section {
@@ -85,6 +108,22 @@ body {
   text-decoration: none;
 }
 
+@media screen and (max-width: 992px) {
+  .custom-section {
+    margin: auto;
+    text-align: center;
+    margin-top: 5em;
+  }
+  .custom-section img {
+    display: none;
+  }
+  .custom-section .custom-btn {
+    padding: 0.5em 0.6em;
+    margin: 0.3em auto;
+    text-align: center;
+  }
+}
+
 .section-socmed {
   margin-left: -10em;
   margin-top: 2.5em;
@@ -98,5 +137,13 @@ body {
   margin-left: 1px;
   width: 35px;
   height: 35px;
+}
+
+@media screen and (max-width: 992px) {
+  .section-socmed {
+    margin: auto;
+    text-align: center;
+    margin: 1.5em 0em;
+  }
 }
 /*# sourceMappingURL=main.css.map */
