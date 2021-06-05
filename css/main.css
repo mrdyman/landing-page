@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 body {
   font-family: "Lato", sans-serif;
-  background-image: url(../img/bg_1.png), url(../img/bg_2.png);
   background-position: top left, right bottom;
   background-repeat: no-repeat;
   background-size: 40vmax, 50vmax;
